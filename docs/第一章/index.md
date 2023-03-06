@@ -75,12 +75,12 @@ OnShell(command string, model interface{}, rules ...Rule)
 然后, 我将分别介绍, 并给出示例
 
 
-<details>
-<summary>On</summary>
+<details>  
+<summary> On</summary> 
 
-> ```go
-> On(typ string, rules ...Rule) 
-> ```
+>  ```go 
+>  On(typ string, rules ...Rule)  
+>  ``` 
 
 咕咕咕
 
@@ -90,14 +90,14 @@ OnShell(command string, model interface{}, rules ...Rule)
 
 [可能有的图片]
 
-</details>
+</details>  
 
-<details>
-<summary>OnMessage</summary>
+<details>  
+<summary> OnMessage</summary> 
 
-> ```go
-> OnMessage(rules ...Rule) 
-> ```
+>  ```go 
+>  OnMessage(rules ...Rule)  
+>  ``` 
 
 OnMessage将被所有的消息触发, 但不会被请求消息和系统提示以及元事件触发
 
@@ -115,22 +115,22 @@ func init() {
 }
 ```
 
->**情景模拟** 
->Human: 消息 
->Bot: 接收到了一条消息 
->Human: 另一条消息 
->Bot: 接收到了一条消息 
+> **情景模拟**  
+> Human: 消息  
+> Bot: 接收到了一条消息  
+> Human: 另一条消息  
+> Bot: 接收到了一条消息  
 
 [可能有的图片]
 
-</details>
+</details>  
 
-<details>
-<summary>OnRequest</summary>
+<details>  
+<summary> OnRequest</summary> 
 
-> ```go
-> OnRequest(rules ...Rule) 
-> ```
+>  ```go 
+>  OnRequest(rules ...Rule)  
+>  ``` 
 
 咕咕咕
 
@@ -140,14 +140,14 @@ func init() {
 
 [可能有的图片]
 
-</details>
+</details>  
 
-<details>
-<summary>OnNotice</summary>
+<details>  
+<summary> OnNotice</summary> 
 
-> ```go
-> OnNotice(rules ...Rule) 
-> ```
+>  ```go 
+>  OnNotice(rules ...Rule)  
+>  ``` 
 
 咕咕咕
 
@@ -157,14 +157,14 @@ func init() {
 
 [可能有的图片]
 
-</details>
+</details>  
 
-<details>
-<summary>OnMetaEvent</summary>
+<details>  
+<summary> OnMetaEvent</summary> 
 
-> ```go
-> OnMetaEvent(rules ...Rule) 
-> ```
+>  ```go 
+>  OnMetaEvent(rules ...Rule)  
+>  ``` 
 
 咕咕咕
 
@@ -174,14 +174,14 @@ func init() {
 
 [可能有的图片]
 
-</details>
+</details>  
 
-<details>
-<summary>OnFullMatch</summary>
+<details>  
+<summary> OnFullMatch</summary> 
 
-> ```go
-> OnFullMatch(src string, rules ...Rule) 
-> ```
+>  ```go 
+>  OnFullMatch(src string, rules ...Rule)  
+>  ``` 
 
 OnFullMatch只有收到与设置的触发词完全相同的消息时, 才会被触发
 
@@ -199,23 +199,23 @@ func init() {
 }
 ```
 
->**情景模拟** 
->Human: 测试 
->Bot: 收到 
->Human: 测试试 
->Human: 测试 
->Bot: 收到 
+> **情景模拟**  
+> Human: 测试  
+> Bot: 收到  
+> Human: 测试试  
+> Human: 测试  
+> Bot: 收到  
 
 [可能有的图片]
 
-</details>
+</details>  
 
-<details>
-<summary>OnFullMatchGroup</summary>
+<details>  
+<summary> OnFullMatchGroup</summary> 
 
-> ```go
-> OnFullMatchGroup(src []string, rules ...Rule) 
-> ```
+>  ```go 
+>  OnFullMatchGroup(src []string, rules ...Rule)  
+>  ``` 
 
 OnFullMatchGroup与OnFullMatch相同, 但可以设置多个触发词
 
@@ -233,26 +233,26 @@ func init() {
 }
 ```
 
->**情景模拟** 
->Human: 测试 
->Bot: 收到 
->Human: test 
->Bot: 收到 
->Human: 测试试 
->Human: testt 
->Human: 测试 
->Bot: 收到 
+> **情景模拟**  
+> Human: 测试  
+> Bot: 收到  
+> Human: test  
+> Bot: 收到  
+> Human: 测试试  
+> Human: testt  
+> Human: 测试  
+> Bot: 收到  
 
 [可能有的图片]
 
-</details>
+</details>  
 
-<details>
-<summary>OnKeyword</summary>
+<details>  
+<summary> OnKeyword</summary> 
 
-> ```go
-> OnKeyword(keyword string, rules ...Rule) 
-> ```
+>  ```go 
+>  OnKeyword(keyword string, rules ...Rule)  
+>  ``` 
 
 OnKeyword将在收到消息中含有触发词时被触发
 
@@ -270,27 +270,27 @@ func init() {
 }
 ```
 
->**情景模拟** 
->Human: 测试 
->Bot: 收到 
->Human: 测试试 
->Bot: 收到 
->Human: 测测试 
->Bot: 收到 
->Human: 测1123试 
->Human: 11测试23 
->Bot: 收到 
+> **情景模拟**  
+> Human: 测试  
+> Bot: 收到  
+> Human: 测试试  
+> Bot: 收到  
+> Human: 测测试  
+> Bot: 收到  
+> Human: 测1123试  
+> Human: 11测试23  
+> Bot: 收到  
 
 [可能有的图片]
 
-</details>
+</details>  
 
-<details>
-<summary>OnKeywordGroup</summary>
+<details>  
+<summary> OnKeywordGroup</summary> 
 
-> ```go
-> OnKeywordGroup(keywords []string, rules ...Rule) 
-> ```
+>  ```go 
+>  OnKeywordGroup(keywords []string, rules ...Rule)  
+>  ``` 
 
 OnKeywordGroup与OnKeyword相同, 但可以设置多个触发词
 
@@ -308,36 +308,36 @@ func init() {
 }
 ```
 
->**情景模拟** 
->Human: 测试 
->Bot: 收到 
->Human: 测试试 
->Bot: 收到 
->Human: 测测试 
->Bot: 收到 
->Human: 测1123试 
->Human: 11测试23 
->Bot: 收到 
->Human: test 
->Bot: 收到 
->Human: testt 
->Bot: 收到 
->Human: ttest 
->Bot: 收到 
->Human: te1123st 
->Human: 11test23 
->Bot: 收到 
+> **情景模拟**  
+> Human: 测试  
+> Bot: 收到  
+> Human: 测试试  
+> Bot: 收到  
+> Human: 测测试  
+> Bot: 收到  
+> Human: 测1123试  
+> Human: 11测试23  
+> Bot: 收到  
+> Human: test  
+> Bot: 收到  
+> Human: testt  
+> Bot: 收到  
+> Human: ttest  
+> Bot: 收到  
+> Human: te1123st  
+> Human: 11test23  
+> Bot: 收到  
 
 [可能有的图片]
 
-</details>
+</details>  
 
-<details>
-<summary>OnCommand</summary>
+<details>  
+<summary> OnCommand</summary> 
 
-> ```go
-> OnCommand(commands string, rules ...Rule) 
-> ```
+>  ```go 
+>  OnCommand(commands string, rules ...Rule)  
+>  ``` 
 
 OnCommand与其它匹配器不同的是, 它只有在消息以`Config`中设置的`CommandPrefix`为开头并且后续为触发词时才能触发
 为了方便演示, 后续教程都将`/`设置为`CommandPrefix`
@@ -356,27 +356,27 @@ func init() {
 }
 ```
 
->**情景模拟** 
->Human: /测试 
->Bot: 收到 
->Human: /测试试 
->Bot: 收到 
->Human: /测测试 
->Human: /测试 
->Bot: 收到 
->Human: /测试 试 
->Bot: 收到 
+> **情景模拟**  
+> Human: /测试  
+> Bot: 收到  
+> Human: /测试试  
+> Bot: 收到  
+> Human: /测测试  
+> Human: /测试  
+> Bot: 收到  
+> Human: /测试 试  
+> Bot: 收到  
 
 [可能有的图片]
 
-</details>
+</details>  
 
-<details>
-<summary>OnCommandGroup</summary>
+<details>  
+<summary> OnCommandGroup</summary> 
 
-> ```go
-> OnCommandGroup(commands []string, rules ...Rule)
-> ```
+>  ```go 
+>  OnCommandGroup(commands []string, rules ...Rule) 
+>  ``` 
 
 OnCommandGroup与OnCommand相同, 但可以设置多个触发词
 
@@ -394,36 +394,36 @@ func init() {
 }
 ```
 
->**情景模拟** 
->Human: /测试 
->Bot: 收到 
->Human: /测试试 
->Bot: 收到 
->Human: /测测试 
->Human: /测试 
->Bot: 收到 
->Human: /测试 试 
->Bot: 收到 
->Human: /test 
->Bot: 收到 
->Human: /testt 
->Bot: 收到 
->Human: /ttest 
->Human: /test 
->Bot: 收到 
->Human: /test t 
->Bot: 收到 
+> **情景模拟**  
+> Human: /测试  
+> Bot: 收到  
+> Human: /测试试  
+> Bot: 收到  
+> Human: /测测试  
+> Human: /测试  
+> Bot: 收到  
+> Human: /测试 试  
+> Bot: 收到  
+> Human: /test  
+> Bot: 收到  
+> Human: /testt  
+> Bot: 收到  
+> Human: /ttest  
+> Human: /test  
+> Bot: 收到  
+> Human: /test t  
+> Bot: 收到  
 
 [可能有的图片]
 
-</details>
+</details>  
 
-<details>
-<summary>OnPrefix</summary>
+<details>  
+<summary> OnPrefix</summary> 
 
-> ```go
-> OnPrefix(prefix string, rules ...Rule) 
-> ```
+>  ```go 
+>  OnPrefix(prefix string, rules ...Rule)  
+>  ``` 
 
 OnPrefix只有在消息开头为设置的前缀词时才能被触发
 并且, 前缀后的文本将被存入`ctx.State["args"]`, 可以用`ctx.State["args"].(string)`来调用
@@ -442,25 +442,25 @@ func init() {
 }
 ```
 
->**情景模拟** 
->Human: 前缀测试 
->Bot: 收到 
->Human: 前缀测试试 
->Bot: 收到 
->Human: 前缀 
->Human: 前缀 测试 
->Bot: 收到 
+> **情景模拟**  
+> Human: 前缀测试  
+> Bot: 收到  
+> Human: 前缀测试试  
+> Bot: 收到  
+> Human: 前缀  
+> Human: 前缀 测试  
+> Bot: 收到  
 
 [可能有的图片]
 
-</details>
+</details>  
 
-<details>
-<summary>OnPrefixGroup</summary>
+<details>  
+<summary> OnPrefixGroup</summary> 
 
-> ```go
-> OnPrefixGroup(prefix []string, rules ...Rule) 
-> ```
+>  ```go 
+>  OnPrefixGroup(prefix []string, rules ...Rule)  
+>  ``` 
 
 OnPrefixGroup与OnPrefix相同, 但可以设置多个前缀词
 
@@ -478,36 +478,36 @@ func init() {
 }
 ```
 
->**情景模拟** 
->Human: 前缀测试 
->Bot: 收到 
->Human: 前缀测试试 
->Bot: 收到 
->Human: 前缀测测试 
->Bot: 收到 
->Human: 测试前缀 
->Human: 前缀 测试 
->Bot: 收到 
->Human: prefixtest 
->Bot: 收到 
->Human: prefixtestt 
->Bot: 收到 
->Human: prefixttest 
->Bot: 收到 
->Human: testprefix 
->Human: prefix test 
->Bot: 收到 
+> **情景模拟**  
+> Human: 前缀测试  
+> Bot: 收到  
+> Human: 前缀测试试  
+> Bot: 收到  
+> Human: 前缀测测试  
+> Bot: 收到  
+> Human: 测试前缀  
+> Human: 前缀 测试  
+> Bot: 收到  
+> Human: prefixtest  
+> Bot: 收到  
+> Human: prefixtestt  
+> Bot: 收到  
+> Human: prefixttest  
+> Bot: 收到  
+> Human: testprefix  
+> Human: prefix test  
+> Bot: 收到  
 
 [可能有的图片]
 
-</details>
+</details>  
 
-<details>
-<summary>OnSuffix</summary>
+<details>  
+<summary> OnSuffix</summary> 
 
-> ```go
-> OnSuffix(suffix string, rules ...Rule) 
-> ```
+>  ```go 
+>  OnSuffix(suffix string, rules ...Rule)  
+>  ``` 
 
 OnPrefix只有在消息结尾为设置的后缀词时才能被触发
 并且, 后缀前的文本将被存入`ctx.State["args"]`, 可以用`ctx.State["args"].(string)`来调用
@@ -526,25 +526,25 @@ func init() {
 }
 ```
 
->**情景模拟** 
->Human: 测试后缀 
->Bot: 收到 
->Human: 测试试后缀 
->Bot: 收到 
->Human: 后缀 
->Human: 测试 后缀 
->Bot: 收到 
+> **情景模拟**  
+> Human: 测试后缀  
+> Bot: 收到  
+> Human: 测试试后缀  
+> Bot: 收到  
+> Human: 后缀  
+> Human: 测试 后缀  
+> Bot: 收到  
 
 [可能有的图片]
 
-</details>
+</details>  
 
-<details>
-<summary>OnSuffixGroup</summary>
+<details>  
+<summary> OnSuffixGroup</summary> 
 
-> ```go
-> OnSuffixGroup(suffix []string, rules ...Rule) 
-> ```
+>  ```go 
+>  OnSuffixGroup(suffix []string, rules ...Rule)  
+>  ``` 
 
 OnSuffixGroup与OnSuffix相同, 但可以设置多个后缀词
 
@@ -562,50 +562,50 @@ func init() {
 }
 ```
 
->**情景模拟** 
->Human: 测试后缀 
->Bot: 收到 
->Human: 测试试后缀 
->Bot: 收到 
->Human: 测测试后缀 
->Bot: 收到 
->Human: 后缀测试 
->Human: 测试 后缀 
->Bot: 收到 
->Human: testsuffix 
->Bot: 收到 
->Human: testtsuffix 
->Bot: 收到 
->Human: ttestsuffix 
->Bot: 收到 
->Human: suffixtest 
->Human: test suffix 
->Bot: 收到 
+> **情景模拟**  
+> Human: 测试后缀  
+> Bot: 收到  
+> Human: 测试试后缀  
+> Bot: 收到  
+> Human: 测测试后缀  
+> Bot: 收到  
+> Human: 后缀测试  
+> Human: 测试 后缀  
+> Bot: 收到  
+> Human: testsuffix  
+> Bot: 收到  
+> Human: testtsuffix  
+> Bot: 收到  
+> Human: ttestsuffix  
+> Bot: 收到  
+> Human: suffixtest  
+> Human: test suffix  
+> Bot: 收到  
 
 [可能有的图片]
 
-</details>
+</details>  
 
-<details>
-<summary>OnRegex</summary>
+<details>  
+<summary> OnRegex</summary> 
 
-> ```go
-> OnRegex(regexPattern string, rules ...Rule) 
-> ```
+>  ```go 
+>  OnRegex(regexPattern string, rules ...Rule)  
+>  ``` 
 
 OnRegex将只有在消息符合你所设置的正则时才会被触发
 并且, 正则匹配的文本将会被存入`ctx.State["regex_matched"]`, 可以用`ctx.State["regex_matched"].([]string)`来调用
 
 由于正则复杂多变, 所以没有示例, 在此提供一个在线正则网站 https://regex101.com/ 以供练手
 
-</details>
+</details>  
 
-<details>
-<summary>OnShell</summary>
+<details>  
+<summary> OnShell</summary> 
 
-> ```go
-> OnShell(command string, model interface{}, rules ...Rule) 
-> ```
+>  ```go 
+>  OnShell(command string, model interface{}, rules ...Rule)  
+>  ``` 
 
 咕咕咕
 
@@ -615,5 +615,5 @@ OnRegex将只有在消息符合你所设置的正则时才会被触发
 
 [可能有的图片]
 
-</details>
+</details>  
 
